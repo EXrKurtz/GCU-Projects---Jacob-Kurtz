@@ -5,13 +5,13 @@ import time
 
 x, y = sp.symbols('x y')
 #     --- ODE ---
-expr = -(y**2)/x
+expr = y/(sp.exp(x) - 1)
 
 # --- Parameters ---
 x0 = 1.0
-y0 = 3.0
+y0 = 5.0
 x_end = 50.0 #steps
-h = 0.01 #step size
+h = 0.02 #step size
 
 my_ode = sp.lambdify((x, y), expr, 'numpy')
 
