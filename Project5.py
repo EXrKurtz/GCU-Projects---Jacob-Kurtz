@@ -26,8 +26,7 @@ storage_size = 1000.0        # Total storage capacity (MB)
 avg_file_size = 35.71        # Average file size (MB) -> yields r ≈ 28.0
 io_churn_rate = 10.0         # 's': Frequency of save/delete commands
 cleanup_rate = 2.667         # 'b': Background gap consolidation rate
-#r = round(storage_size / avg_file_size, 2)  # Storage pressure factor (28.0)
-r = 10
+r = round(storage_size / avg_file_size, 2)  # Storage pressure factor (28.0)
 
 # Base hardware timing constants (ms)
 base_access_time = 2.0
